@@ -1,0 +1,19 @@
+<view class="main" wx:for="{{cartList}}" wx:key="index">
+  <view class="df">
+    <checkbox checked="{{item.status}}" data-index="{{index}}" bindtap="checkes" class="dx" />
+    <image src="{{item.list_pic_url}}" mode="" class="img" />
+    {{item.goods_brief}}
+    <view class="df">
+      <text class="bjq" data-index="{{index}}" bindtap="numjian">-</text>
+      <text class="bjq">{{item.num}}</text>
+      <text class="bjq" data-index="{{index}}" bindtap="numjia">+</text>
+    </view>
+  </view>
+</view>
+<view class="dfs">
+  <view>
+    <checkbox checked="{{checkedAll}}" bindtap="selectAll" />全选
+  </view>
+  <text>总价：{{total}}</text>
+  <text bindtap="selectDel">删除选中</text>
+</view>
