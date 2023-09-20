@@ -1,0 +1,14 @@
+<view class="main">
+    <view class="left">
+        <text wx:for="{{navList}}" wx:key="index" data-id="{{item.id}}" bindtap="changeTab" class="content {{item.id==active?'red':''}}">{{item.name}}</text>
+    </view>
+
+    <scroll-view class="right" scroll-y>
+        <view class="right-con">
+            <view class="right-item" wx:for="{{rightList}}" wx:key="id" data-id="{{item.id}}" bindtap="tz">
+                <image src="{{item.primary_pic_url}}" class="img" mode="" />
+                <view class="title">{{item.name}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

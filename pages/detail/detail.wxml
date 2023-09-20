@@ -1,0 +1,9 @@
+<view class="item">
+    <swiper class="sw1" autoplay>
+        <swiper-item wx:for="{{LbList}}" wx:key="index" >
+            <image src="{{item.img_url}}" mode="" class="img" />
+        </swiper-item>
+    </swiper>
+    <view>价格22</view>
+    <text class="btn" bindtap="addCart">加入购物车</text>
+</view>
